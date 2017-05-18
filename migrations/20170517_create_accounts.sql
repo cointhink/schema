@@ -5,3 +5,6 @@ create table accounts (
   email text not null unique,
   username text
 );
+
+-- +goose Down
+drop table accounts;
