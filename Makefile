@@ -6,14 +6,14 @@ all: ./bin/goose up
 up:
 	$(eval URL=$(shell hjson -c ../api-go/config.hjson  | jq .db.url))
 	./bin/goose -dir migrations postgres $(URL) up
-	make status
+	make info
 
 down:
 	@echo down one migration
 	$(eval URL=$(shell hjson -c ../api-go/config.hjson  | jq .db.url))
 	./bin/goose -dir migrations postgres $(URL) down
-	make status
+	make info
 
-status:
+info:
 	$(eval URL=$(shell hjson -c ../api-go/config.hjson  | jq .db.url))
 	./bin/goose -dir migrations postgres $(URL) status
