@@ -2,7 +2,7 @@
 create table algoevents (
   id varchar(128) primary key,
   created_at timestamp default now(),
-  algorithm_id varchar(128) references algorithms,
+  algorun_id varchar(128) references algoruns,
   type varchar(128),
   message text
 );
