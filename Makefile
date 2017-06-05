@@ -1,4 +1,4 @@
-all: ./bin/goose up
+all: ./bin/goose info
 
 ./bin/goose:
 	go get -u github.com/pressly/goose/cmd/goose
