@@ -1,4 +1,4 @@
 -- +goose Up
-alter table schedules add schedule_id varchar(128);
+alter table algoruns add schedule_id varchar(128);
 -- +goose Down
-alter table schedules drop schedule_id;
+alter table algoruns drop schedule_id;
