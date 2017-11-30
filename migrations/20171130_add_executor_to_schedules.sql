@@ -1,5 +1,4 @@
 -- +goose Up
-alter table schedules add executor text;
-update schedules set executor = 'container';
+alter table schedules add executor int not null default 0;
 -- +goose Down
 alter table schedules drop executor;
